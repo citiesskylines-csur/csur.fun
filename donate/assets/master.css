@@ -1,0 +1,1621 @@
+html, body{
+	background-color: #FFFFFF;
+	width: auto;
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	font-family: PingFang, 'Microsoft YaHei','SF Pro Display',Roboto,Noto,Arial,'PingFang SC',sans-serif;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	
+}
+
+.header{
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1000;
+	min-height: 325px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.headerBg{
+	background: linear-gradient(10deg, rgb(203, 79, 23), rgb(239, 153, 115)) 0% 0% / 100% no-repeat, rgb(239, 153, 115);
+	-webkit-mask: url(./img/mask.svg) 100% -150px / cover no-repeat;
+	position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    max-width: 1368px;
+    z-index: -1;
+}
+
+.headerHero{
+	background-image: url(../../assets/img/ico.png);
+    background-size: cover;
+    width: 5.3125rem;
+    height: 5.3125rem;
+    background-repeat: no-repeat;
+}
+
+.hText{
+	padding: 2.5rem 1.875rem 0;
+	max-width: 1260px;
+	margin: 0px auto;
+}
+
+.hTextInline{
+	flex-wrap: wrap;
+	display: flex;
+	box-sizing: border-box;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.openSource{
+	font-size: 8px;
+    letter-spacing: 0.2em;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: rgb(113, 117, 122);
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px;
+    background: rgb(240, 242, 245);
+    margin: 8px;
+}
+
+.backIco a{
+	text-decoration: none;
+}
+
+.backIco button{
+	-webkit-appearance: none;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(118, 119, 122);
+    font-size: 14px;
+    line-height: 21px;
+    /* margin-right: 16px; */
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    outline: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(220, 222, 224);
+    border-image: initial;
+    border-radius: 100px;
+    padding: 0px;
+}
+
+.backIco svg{
+	vertical-align: middle;
+}
+
+h1{
+	font-weight: bolder;
+}
+
+h2{
+	margin-top: 8px;
+    font-size: 16px;
+    line-height: 24px;
+	font-weight: 500;
+}
+
+.header button:hover{
+	color: rgb(236, 136, 92);
+    border-color: rgb(239, 153, 115);
+}
+.header button:active{
+	background-color: #E65F23;
+	border-color: #E65F23;
+	color: #FFF;
+}
+
+/* 菜单栏 */
+.NavbarContainer{
+	box-sizing: border-box;
+    position: sticky;
+    top: 0px;
+    z-index: 9999;
+    margin-top: 0px;
+}
+.NavbarContent{
+	box-shadow: rgba(214, 214, 214, 0.5) 0px 6px 10px -5px;
+	background: white;
+}
+.NavbarContent > *{
+	max-width: 1260px;
+	margin: 0px auto;
+}
+.Navbar{
+	box-sizing: border-box;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    background: white;
+}
+.menuContainer{
+	box-sizing: border-box;
+    flex-direction: column;
+    /* display: none; */
+	display: flex;
+	flex-direction: row;
+	
+    height: 100%;
+    overflow-x: auto;
+    flex: 2 1 600px;
+    border-bottom: 1px solid rgb(230, 232, 235);
+}
+.menuLinkContainer{
+	cursor: pointer;
+    color: rgb(9, 10, 10);
+    font-weight: 500;
+}
+.menuLinkContainer::after{
+	content: "";
+    display: block;
+    width: 0px;
+    height: 3px;
+    float: right;
+    background: rgb(231, 103, 46);
+    transition: width 0.2s ease 0s;
+}
+.activeMenu:after{
+	    width: 100%;
+	    float: left;
+}
+.menuLink{
+	display: block;
+    color: rgb(113, 117, 122);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 16px 16px 16px;
+}
+.activeLink{
+	color: rgb(9, 10, 10);
+}
+.menuOtherContainer{
+	box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: none;
+    white-space: nowrap;
+	display: flex;
+	height: 100%;
+}
+.menuOtherBtn{
+	-webkit-appearance: none;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(118, 119, 122);
+    font-size: 14px;
+    line-height: 21px;
+    min-width: 100px;
+    outline: 0px;
+	border: 1px solid rgb(220, 222, 224);
+    border-image: initial;
+    border-radius: 100px;
+    padding: 8px 16px;
+    margin: 4px 8px;
+}
+.otherBtnImportent{
+	color: rgb(230, 95, 35);
+	border-color: rgb(231, 103, 46);
+}
+.menuOtherBtn:hover{
+	background-color: rgb(247, 248, 250);
+}
+.menuOtherBtn:active{
+	background-color: rgb(230, 95, 35);
+    color: white;
+    border-color: rgb(230, 95, 35);
+}
+
+
+.card{
+	display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 16px 0px;
+	overflow-y: hidden;
+    width: fit-content;
+	width: -moz-fit-content;
+    max-width: 100%;
+    margin: 0px auto;
+}
+
+/* Edge IE 兼容 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { /*针对ie*/
+	.cardForDev,
+	.cardForAliyunCDN{
+		width: 94.375rem;
+	}
+}
+@supports (-ms-ime-align: auto) { /* Edge */
+  .cardForDev,
+  .cardForAliyunCDN{
+  	width: 94.375rem;
+  }
+}
+
+.ctrBoxText, .budgetContainer{
+	max-width: 1260px;
+    margin: 0px auto;
+}
+
+.ctrBoxText h2, .budget h2{
+	word-break: break-word;
+    color: rgb(20, 20, 20);
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: normal;
+}
+
+.ctrBoxText h3{
+	color: rgb(78, 80, 82);
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: -0.4px;
+    line-height: 36px;
+	margin-bottom: 0;
+}
+
+.ctrBoxText_switchBtn{
+	box-sizing: border-box;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    display: inline;
+	/* flex-wrap: wrap;*/
+	margin-bottom: 1.25rem;
+}
+
+.ctrBoxText_switchBtn h4{
+	margin: 0;
+	font-weight: normal;
+	margin-bottom: 0.625rem;
+	color: #76777a;
+}
+
+.switch{
+	box-sizing: border-box;
+    margin: 8px;
+    flex: 0 0 50px;
+}
+
+.switchBtns{
+	display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    color: rgb(218, 218, 218);
+    user-select: none;
+    width: 49px;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.switchBtns svg{
+	width: 14px;
+    height: 14px;
+}
+
+.switchBtns svg:not([disabled]) {
+    color: rgb(231, 103, 46);
+	cursor: pointer;
+}
+
+.contribute, .budgetContainer{
+	/* padding: 4rem 1.875rem 0; */
+	padding: 4rem 0 0;
+}
+
+.ctrCardsContainer{
+	display: flex;
+	height: 100%;
+    flex: 0 0 280px;
+	padding-left: 0.625rem ;
+	padding-right: 0.625rem;
+	/* position:relative; */
+}
+
+.card_qr{
+	display: flex;
+    flex-direction: column;
+    width: 280px;
+    border-radius: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(220, 222, 224);
+    border-image: initial;
+    position: relative;
+}
+
+.cardHead{
+	height: 104px;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+    background: radial-gradient(circle, rgb(239, 153, 115) 0%, rgb(203, 79, 23) 150%), rgb(231, 103, 46);
+}
+
+.headAlipay{
+	background-image: url(img/alipay.jpg);
+}
+
+.headWechat{
+	background-image: url(img/wechat.jpg);
+}
+
+.headQQ{
+	background-image: url(img/qq.jpg);
+}
+.headpaypal{
+	background-image: url(img/paypal.jpg);
+}
+
+.headVenmo{
+	background-image: url(img/venmo.jpg);
+}
+
+.headAliyunCDN{
+	background-image: url(img/aliyun.jpg);
+}
+
+.headQcloud{
+	background-image: url(img/qcloud.jpg);
+}
+
+.cardHeadTagContainer {
+    display: flex;
+    height: 100%;
+}
+
+.cardHeadTagContainer .cardHeadTag{
+    position: relative;
+	height: 0.75rem;
+	top: initial;
+	margin-right: 0.5rem;
+}
+
+.cardHeadTagsMain{
+	position: relative;
+	height: 1.75rem;
+	top: 4.75rem;
+}
+
+.cardHeadTag{
+	font-size: 8px;
+    letter-spacing: 0.2em;
+    line-height: 12px;
+    /*text-transform: uppercase;*/
+    text-align: center;
+    color: rgb(78, 80, 82);
+    font-weight: 600;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    border-radius: 4px;
+    padding: 8px;
+    background: white;
+}
+
+.cardBody{
+	box-sizing: border-box;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+    padding: 16px;
+    flex: 1 1 0%;
+}
+
+.cardTextTitle{
+	margin-top: 4px;
+    margin-bottom: 1.25rem;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.cardTextDescribe{
+	overflow-wrap: break-word;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    line-height: 20px;
+    /* height: 100%; */
+    margin: 8px 0px;
+    flex: 1 1 0%;
+	margin-bottom: 2rem;
+}
+
+.cardForDev .cardTextDescribe{
+	margin-bottom: 0.625rem;
+}
+
+
+.producDescribe{
+	color: rgb(118, 119, 122);
+    margin-bottom: 0.625rem;
+    margin-top: 0px;
+    font-size: 12px;
+    letter-spacing: -0.4px;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+	height: 1.25rem;
+}
+.cardForAliyunCDN .producDescribe{
+	height: 2.5rem;
+}
+
+.priceContent{
+	margin-bottom: 0.625rem;
+}
+
+.priceText{
+	color: rgb(78, 80, 82);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 14px;
+    letter-spacing: -0.4px;
+    line-height: 20px;
+}
+
+.price{
+	color: rgb(20, 20, 20);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.cardBodyBottom button{
+	-webkit-appearance: none;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(230, 95, 35);
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    width: 100%;
+    outline: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(231, 103, 46);
+    border-image: initial;
+    border-radius: 100px;
+    padding: 8px 16px;
+}
+
+.cardBodyBottom button:hover{
+	background-color: rgb(247, 248, 250);
+}
+
+button.alipay{
+	color: #108EE9;
+	border-color: #108EE9;
+}
+button.alipay:active{
+	background-color: #108EE9;
+	color: #FFF;
+}
+
+button.wechat{
+	color: #00c250;
+	border-color: #00c250;
+}
+button.wechat:active{
+	background-color: #00c250;
+	color: #FFF;
+}
+
+/* .QQ span{
+	display: inline-block;
+    color: #00beff;
+	background-image: -webkit-linear-gradient(bottom left, #8e6ce0, #00beff);
+	background-image: linear-gradient(to top right, #8e6ce0, #00beff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	width: 100%;
+	height: 100%;
+} */
+
+button.QQ{
+	color: #00beff;
+	border-color: #00beff;
+}
+button.QQ:active{
+	background-color: #00beff;
+	color: #FFF;
+}
+
+/* .paypal span{
+	display: inline-block;
+	color: #0070ba;
+	background-color: #0070ba;
+	background-image: linear-gradient(100deg,#0070ba,#1546a0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+} */
+
+button.paypal{
+	color: #0070ba;
+	border-color: #0070ba;
+}
+button.paypal:active{
+	background-color: #0070ba;
+	color: #FFF;
+}
+
+button.venmo{
+	color: #3eb5fd;
+	border-color: #3eb5fd;
+}
+button.venmo:active{
+	background-color: #3eb5fd;
+	color: #FFF;
+}
+
+.Mgpay span{
+	display: inline-block;
+	color: #0070ba;
+	background-image: -webkit-linear-gradient(bottom left, #108EE9, #00c250, #00beff, #0070ba);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+button.qcloud{
+	border-color: #006eff;
+}
+
+.cardForAliyunCDN button{
+	border-color: #ff6a00;
+}
+
+#MgpayS1 {
+	cursor: not-allowed;
+}
+
+.serverCard .ctrCardsContainer{
+	padding-left: 1.875rem;
+}
+
+.contributorBoxContainer{
+	box-sizing: border-box;
+    margin-top: 8px;
+    height: 60px;
+	/*display: none;*/
+	visibility: hidden;
+}
+
+.ctrbtorsBox{
+	box-sizing: border-box;
+    display: flex;
+}
+
+.ctrbtorsAvatars{
+	box-sizing: border-box;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.ctrbtorsAvatars a{
+	text-decoration: none;
+}
+
+.ctrbtorsAvatar{
+	box-sizing: border-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-size: cover;
+    color: rgb(196, 199, 204);
+    font-weight: bold;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.ctrbtorsAvatar .Avatar{
+	width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    display: inline-block;
+    box-sizing: content-box;
+    color: #fff;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+.ctrCounts{
+	box-sizing: border-box;
+    color: rgb(118, 119, 122);
+    margin-left: 8px;
+    padding-top: 0.7em;
+    font-size: 12px;
+}
+
+.ctrDescribe{
+	color: rgb(118, 119, 122);
+    /* margin-top: 8px; */
+    margin-bottom: 0px;
+    font-size: 10px;
+    letter-spacing: -0.6px;
+    line-height: 20px;
+}
+
+.qr{
+	position: absolute;
+	z-index: -100;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;  
+	-ms-transition: all 0.2s ease-in-out;  
+	-o-transition: all 0.2s ease-in-out;  
+	transition: all 0.2s ease-in-out;  
+	top: 0;
+	width: 280px;
+}
+
+.qrcode{
+	position: absolute;
+	display: none;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;  
+	-ms-transition: all 0.5s ease-in-out;  
+	-o-transition: all 0.5s ease-in-out;  
+	transition: all 0.5s ease-in-out;  
+	z-index: 999;
+	top: 0;
+	width: 280px;
+}
+
+.qrcode button{
+	position: absolute;
+	text-align: right;
+	top: 0.3125rem;
+	right: 0.3125rem;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.qr img, .qrcode img{
+	border-radius: 15px;
+	/* height: 100%; */
+	max-width: 100%;
+	height: auto;
+}
+
+.show{
+	display: block;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;  
+	-ms-transition: all 0.5s ease-in-out;  
+	-o-transition: all 0.5s ease-in-out;  
+	transition: all 0.5s ease-in-out;  
+	opacity: 0;
+}
+
+.showIn{
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;  
+	-ms-transition: all 0.5s ease-in-out;  
+	-o-transition: all 0.5s ease-in-out;  
+	transition: all 0.5s ease-in-out;  
+	opacity: 1 !important;
+}
+
+/* 预算 ↓ */
+.budgetCard{
+	box-sizing: border-box;
+    flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+}
+.recentDeal{
+	box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 16px;
+    flex: 10 1 0%;
+}
+.recentDealListContainer{
+	border: 0.0625rem solid #e6e8eb;
+    border-radius: 8px 8px 0px 0px;
+	width: 100%;
+}
+.recentDealListContainer > .recentDealList:not(:last-child) {
+    border-bottom: 1px solid rgb(230, 232, 235);
+}
+.recentDealList{
+	position: relative;
+}
+.recentDealListSideLine{
+	position: absolute;
+    right: -1px;
+    height: 70%;
+    width: 2px;
+    margin: 14px 0px;
+    background: linear-gradient(rgb(22, 221, 0) 0%, rgb(198, 243, 204) 55.73%, rgba(255, 255, 255, 0) 100%);
+}
+.sideLineOut{
+	background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 212, 223) 55.73%, rgb(255, 0, 68) 100%);
+}
+.recentDealListContent{
+	display: flex;
+    padding: 24px;
+	flex-wrap: wrap;
+}
+.recentDealListContent .Avatar {
+	width: 2.5rem;
+	height: 2.5rem;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+	display: inline-block;
+	box-sizing: content-box;
+	color: #fff;
+	text-align: center;
+	vertical-align: top;
+	text-decoration: none;
+}
+
+.userAvatarBox{
+	box-sizing: border-box;
+    margin-right: 16px;
+    order: 1;
+}
+.userAvatar{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(240, 241, 242);
+    background-size: cover;
+    color: rgb(196, 199, 204);
+    font-weight: bold;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    overflow: hidden;	
+}
+.DealDetail{
+	order: 2;
+    width: auto;
+    margin-top: 0px;
+	display: flex;
+	box-sizing: border-box;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.detailTitle{
+	box-sizing: border-box;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.detailTitle a{
+	cursor: pointer;
+    text-decoration: none;
+	color: rgb(20, 20, 20);
+	margin: 0 0;
+    font-weight: bold;
+    font-size: 0.875rem;
+    letter-spacing: -0.4px;
+    line-height: 20px;
+}
+.StateTag{
+	font-size: 8px;
+    letter-spacing: 0.1em;
+    line-height: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 16px;
+    color: rgb(0, 158, 74);
+    border-radius: 4px;
+    padding: 6px 8px;
+    background: rgb(214, 255, 233);
+    border-color: rgb(24, 204, 108);
+}
+.detailCaption{
+    color: rgb(157, 159, 163);
+    margin-top: 8px;
+    font-size: 12px;
+}
+.detailCaption a{
+	color: rgb(231, 103, 46);
+	text-decoration: none;
+}
+.detailCaption a:hover{
+	opacity: 0.7;
+}
+.DealMoney{
+    order: 3;
+    margin-left: auto;
+    font-size: 16px;
+}
+.DealMoney .dealMoneyType{
+	color: rgb(13, 184, 19);
+    margin-right: 8px;
+}
+.MoneyTyprOut{
+	color: rgb(184, 15, 60);
+}
+.DealMoney .MoneyNum{
+	margin-right: 4px;
+    font-weight: bold;
+}
+.DealMoney .currency{
+	color: rgb(196, 199, 204);
+}
+
+
+.recentDealButtonContainer{
+	box-sizing: border-box;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 16px;
+    display: flex;
+}
+.recentDealButton{
+	box-sizing: border-box;
+    margin-left: 0px;
+    margin-right: 0px;
+    flex: 1 1 0%;
+}
+.recentDealButton a{
+	cursor: pointer;
+    text-decoration: none !important;
+}
+.recentDealButton button{
+	-webkit-appearance: none;
+    cursor: pointer;
+    background-color: white;
+    color: #76777a;
+    font-size: 16px;
+    line-height: 18px;
+	margin: 0.5rem auto;
+    min-width: 290px;
+	width: 100%;
+    outline: 0px;
+	border: 0.0625rem solid #dcdee0;
+    border-image: initial;
+    border-radius: 100px;
+    padding: 10px 64px;
+}
+button.normal:hover{
+	color: #ec885c;
+    border-color: #ef9973;
+}
+button.normal:active{
+	background-color: #E65F23;
+	border-color: #E65F23;
+	color: #FFF;
+}
+
+.dividingBox{
+	box-sizing: border-box;
+    width: 32px;
+    flex: 1 1 0%;
+}
+
+.statistics{
+	display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 8px;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(220, 222, 224);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.statistics p{
+	color: rgb(78, 80, 82);
+    margin: 0;
+    font-size: 10px;
+    letter-spacing: -0.4px;
+    line-height: 20px;
+    text-transform: uppercase;
+	font-weight: 300;
+}
+.todaysBalance, .annualExpenditure{
+	padding: 1rem 2rem;
+	box-sizing: border-box;
+    flex: 1 1 0%;
+    padding: 16px 32px;
+}
+.statistics .money{
+	margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    letter-spacing: -0.4px;
+    line-height: 20px;
+	font-weight: normal;
+}
+.statistics .todaysBalance .money{
+	font-weight: bolder;
+}
+.statistics .money span{
+	color: #c4c7cc;
+	font-weight: normal;
+}
+.annualExpenditure{
+	background: #f5f7fa;
+}
+
+/* 预算 ↑ */
+
+/* 捐助者列表 ↓*/
+section.contributorContainer {
+    position: relative;
+}
+
+.contributorMainCotainer{
+	box-sizing: border-box;
+    padding-top: 80px;
+    padding-bottom: 8px;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0px, rgba(255, 255, 255, 0) 75px, rgba(255, 255, 255, 0) calc(100% - 125px), rgb(255, 255, 255) 100%), url(img/bg.svg) center -900px repeat-y;
+	box-shadow: rgba(214, 214, 214, 0.5) 0px 6px 10px -5px;
+}
+.contributorSectionContent{
+	padding: 0 1.875rem;
+}
+
+.contributorSectionContent, .contributorList .switch{
+	max-width: 1260px;
+    margin: 0px auto;
+}
+
+.contributorSectionContent h2{
+	word-break: break-word;
+    color: rgb(20, 20, 20);
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1em;
+}
+
+.contributorSectionContent h3{
+	color: rgb(20, 20, 20);
+    margin-bottom: 16px;
+    margin-top: 0px;
+    font-weight: normal;
+    font-size: 32px;
+    letter-spacing: -0.4px;
+    line-height: 36px;
+}
+
+.contributorSectionContent span{
+	color: rgb(196, 199, 204);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: inherit;
+    letter-spacing: -0.4px;
+    line-height: inherit;
+}
+
+.budgetTitle p, .contributorSectionContent p{
+	color: rgb(118, 119, 122);
+    margin-bottom: 32px;
+    margin-top: 0px;
+    font-size: 14px;
+    letter-spacing: -0.4px;
+    line-height: 20px;
+}
+
+.contributorList{
+	max-width: 1260px;
+    margin: 0 auto;
+}
+
+.contributorList .switch .switchBtns{
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.contributorListCotainer{
+	box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    will-change: transform;
+    direction: ltr;
+    padding-left: 0px;
+	display: flex;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	padding: 1rem 0;
+	overflow-y: hidden;
+}
+
+.contributorCardCotainer{
+	display: flex;
+	width: 2320px;
+	position: relative;
+	/* min-width: 1260px; */
+	min-width: auto;
+    margin-left: 0;
+	width: fit-content;
+	/* margin: 0px auto; */
+}
+.contributorCardCotainer > div:first-of-type{
+	margin-left: 0.625rem;
+}
+
+.ctrbutorCardMainCotainer{
+	width: 144px;
+    height: 290px;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(220, 222, 224);
+    border-radius: 8px;
+    overflow: hidden;
+	margin: 0 1rem;
+}
+
+.ctrbutorCardMainCotainer a:hover, .ctrbutorAvatar:hover{
+    opacity: 0.9;
+}
+
+.ctrbutorCardLogo{
+	display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 44px;
+    border-top: 1px solid rgb(230, 232, 235);
+}
+
+.ctrbutorLogoBox{
+	box-sizing: border-box;
+    margin-top: -32px;
+}
+
+.ctrbutorLogoBox a{
+	text-decoration: none;
+}
+
+.ctrbutorAvatar{
+	box-sizing: border-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(240, 241, 242);
+    background-size: cover;
+    color: rgb(196, 199, 204);
+    font-weight: bold;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.ctrbutorAvatar .Avatar{
+	width: 4rem;
+    height: 4rem;
+    font-size: 2.1875rem;
+    line-height: 4rem;
+	display: inline-block;
+    box-sizing: content-box;
+    color: #fff;
+    text-align: center;
+    vertical-align: top;
+	text-decoration: none;
+}
+
+.ctrbutorText{
+	box-sizing: border-box;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    padding: 4px 8px 8px;
+	text-align: center;
+}
+
+.ctrbutorText a{
+	display: block;
+    text-decoration: none;
+}
+
+.ctrbutorName{
+	color: rgb(49, 50, 51);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 18px;
+    letter-spacing: -0.4px;
+}
+
+.ctrbutorTag{
+	font-size: 12px;
+    line-height: 0.75rem;
+    text-transform: uppercase;
+    color: rgb(113, 117, 122);
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+    font-style: initial;
+    border-radius: 4px;
+    background: rgb(240, 242, 245);
+    padding: 5px;
+}
+
+.ctrbutorTotal{
+	color: rgb(157, 159, 163);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: -0.4px;
+}
+
+.ctrbutorMoney{
+	margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    line-height: 20px;
+}
+
+.ctrbutorMoneyCount{
+	margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: inherit;
+    letter-spacing: -0.4px;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.publicMessage{
+	max-height: 79px;
+	font-size: 10px;
+    line-height: 13px;
+    letter-spacing: -0.2px;
+    color: rgb(118, 119, 122);
+    text-align: center;
+    word-break: break-word;
+    font-style: italic;
+    margin: 5px 0px;
+	overflow-y: inherit;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 100px 0;
+    line-height: 2em;
+	font-size: 16px;
+	color: #7E96B3;
+	background-color: #f5f7fa;
+}
+
+footer .container{
+	max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.Footer-nav {
+    margin-bottom: 5px;
+}
+
+footer p.lang {
+    margin: 0 0;
+	color: #aaabab;
+    text-align: center;
+    font-size: 0.8125rem;
+    margin-top: 10px;
+}
+
+.Footer-nav a, .Footer-copyright span {
+    margin: 0 8px;
+}
+
+footer a{
+	color: #7E96B3;
+    text-decoration: none;
+    padding-bottom: 1px;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+footer a:hover{
+	color: #E7672E;
+}
+
+/* ToolTip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltiptext{
+	background-image: none !important;
+	-webkit-background-clip: border-box !important; 
+	-webkit-text-fill-color: currentColor !important;
+}
+
+.tooltip .tooltiptext {
+	/* 默认右边出现 */
+    visibility: hidden;
+    /* width: 120px; */
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+
+    /* 定位 */
+    position: absolute;
+    z-index: 1;
+	
+	/* 改为上方出现 */
+    width: 150px;
+    bottom: 115%;
+    left: 50%; 
+    margin-left: -75px; /* 使用一半宽度 (120/2 = 60) 来居中提示工具 */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+	/* 添加箭头 */
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* 提示工具底部 */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+/* Tool Tip 结束 */
+
+/* 漫画文字 */
+.comicsans {
+	font-family: 'Comic Sans MS', sans-serif;
+	
+	background-image: -webkit-linear-gradient(top left, #8e6ce0, #00beff, #8e6ce0);
+	background-image: linear-gradient(to top right, #8e6ce0, #00beff);
+	
+	background-size: 200px auto;
+	color:transparent;
+	text-transform: uppercase;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation: ComicSansRainbow 6s linear infinite;
+}
+
+@keyframes ComicSansRainbow {
+    0% { background-position: 0 0; }
+    100% { background-position: 200px 0; }
+}
+
+/* 黑幕 */
+.spoiler {
+	color: #000000;
+	background-color: #000000;
+	padding: 0px 8px;
+}
+
+.spoiler:hover {
+	color: #FFF;
+}
+.spoiler p{
+	margin: 0;
+}
+
+/* 媒体审查 */
+@media screen and (min-width: 40em){
+	/* .NavbarContainer{
+		margin-top: -30px;
+	} */
+	.Navbar{
+		padding-left: 30px;
+		padding-right: 30px;
+		position: relative;
+	}
+	.menuContainer{
+		border-bottom: none;
+	}
+	
+	.hText, .budgetContainer, .ctrBoxText, .contributorSectionContent {
+	    padding-left: 30px;
+	    padding-right: 30px;
+		box-sizing: border-box;
+	}
+	
+	.recentDealList .recentDealListContent {
+		align-items: flex-start;
+		padding: 24px;
+	}
+	
+	.recentDealButtonContainer .recentDealButton{
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	
+	.budgetCard .statistics {
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width: 52em){
+	.menuContainer{
+		display: flex;
+		flex-direction: row;
+	}
+	.activeMenu::after{
+		width: 100%;
+        float: left;
+	}
+	.menuOtherContainer{
+		display: flex;
+	}
+	
+	.budgetContainer .budgetCard{
+	    flex-direction: row;
+	}
+	
+	.budgetCard .statistics {
+		flex-direction: column;
+		margin-left: 16px;
+		margin-right: 16px;
+		flex: 1 1 300px;
+	}
+}
+
+@media screen and (max-width: 40em){
+	.Navbar {
+		position: relative;
+	}
+}
+@media screen and (max-width: 31.25rem){
+	.menuOtherContainer {
+		display: none;
+	}
+	.NavbarContent{
+		margin: 0 auto;
+	}
+	.Navbar{
+	    width: fit-content;
+		width: -moz-fit-content;
+	}
+	.menuContainer{
+		border-bottom: none;
+	}
+}
+
+/* 移动端 */
+
+@media (max-width: 650px){
+	.headerBg{
+		-webkit-mask-position-x: 20%;
+	}
+	.hText{
+		padding: 3.75rem 0.9375rem 0;
+	}
+	.card > div:first-of-type {
+	  padding-left: 1.25rem;
+	}
+	.card > div:last-of-type {
+	  padding-right: 1.25rem;
+	}
+	.ctrBoxText,
+	.contributorSectionContent,
+	.budgetContainer
+	{
+		padding-left: 0.9375rem;
+		padding-right: 0.9375rem;
+	}
+	.contributorCardCotainer{
+		min-width: auto;
+	}
+	.contributorCardCotainer > div:first-of-type{
+		margin-left: 1.25rem;
+	}
+	.contributorCardCotainer > div:nth-last-child(2){
+		margin-right: 1.59375rem;
+	}
+	.contributorListCotainer{
+		padding-left: 0;
+	}
+	footer{
+		font-size: 0.9375rem;
+	}
+}
+
+
+@media (min-width:500px) {
+	/* 滚动条 */
+	.card::-webkit-scrollbar,
+	.contributorListCotainer::-webkit-scrollbar,
+	.contributorList::-webkit-scrollbar
+	{
+	    height: 8px;
+	    margin: 0px 16px;
+	}
+	
+	.publicMessage:window-inactive {
+		/*当焦点不在当前区域滑块的状态*/
+		background: transparent;
+		}
+		
+	.publicMessage::-webkit-scrollbar
+	{
+		width: 8px;
+		margin: 0;
+	}
+	
+	.card::-webkit-scrollbar-button,
+	.contributorListCotainer::-webkit-scrollbar-button,
+	.contributorList::-webkit-scrollbar-button,
+	.publicMessage::-webkit-scrollbar-button
+	{
+	    color: white;
+	}
+	
+	.card:focus::-webkit-scrollbar-thumb,
+	.contributorListCotainer:focus::-webkit-scrollbar-thumb,
+	.contributorList:focus::-webkit-scrollbar-thumb,
+	.publicMessage:focus::-webkit-scrollbar-thumb
+	{
+	    background: #757575;
+	}
+	
+	.card:not(:hover)::-webkit-scrollbar-thumb,
+	.contributorListCotainer:not(:hover)::-webkit-scrollbar-thumb,
+	.contributorList:not(:hover)::-webkit-scrollbar-thumb,
+	.publicMessage:not(:hover)::-webkit-scrollbar-thumb
+	{
+	    background: transparent;
+	}
+	
+	.card::-webkit-scrollbar-thumb,
+	.contributorListCotainer::-webkit-scrollbar-thumb,
+	.contributorList::-webkit-scrollbar-thumb,
+	.publicMessage::-webkit-scrollbar-thumb
+	{
+	    background: rgb(209, 209, 211);
+	    border-radius: 16px;
+	}
+	
+	.card::-webkit-scrollbar-thumb:hover,
+	.contributorListCotainer::-webkit-scrollbar-thumb:hover,
+	.contributorList::-webkit-scrollbar-thumb:hover,
+	.publicMessage::-webkit-scrollbar-thumb:hover
+	{
+		background-color: #b9b9b9;
+	}
+	
+	.card::-webkit-scrollbar-thumb:active,
+	.contributorListCotainer::-webkit-scrollbar-thumb:active,
+	.contributorList::-webkit-scrollbar-thumb:active,
+	.publicMessage::-webkit-scrollbar-thumb:active
+	{
+		background-color: #757575;
+	}
+	
+	.card:not(:hover)::-webkit-scrollbar-track,
+	.contributorListCotainer:not(:hover)::-webkit-scrollbar-track,
+	.contributorList:not(:hover)::-webkit-scrollbar-track,
+	.publicMessage:not(:hover)::-webkit-scrollbar-track
+	{
+	    background: transparent;
+	}
+	
+	.card::-webkit-scrollbar-track,
+	.contributorListCotainer::-webkit-scrollbar-track,
+	.contributorList::-webkit-scrollbar-track,
+	.publicMessage::-webkit-scrollbar-track
+	{
+	    background: rgb(242, 243, 244);
+	    border-radius: 20px;
+	}
+	/* 滚动条 ↑ */
+}
+
+/*返回顶部开始*/
+.scroll-up {
+    background-color: #f8504b; /*初始颜色*/
+    color:#ffffff; /*文字白色*/
+    transition: transform 0.5s; /*设置效果出现、消失过渡时间*/
+	border-radius: 50px; /*圆角*/
+	bottom: 30px; /*距离网页底部*/
+	padding: 3px;
+	display: none;
+	height: 50px; /*圆高度*/
+	opacity: 1;
+	position: fixed;
+	right: 30px; /*距离网页右边*/
+	text-align: center; /*文本居中*/
+	width: 50px; /*圆宽度*/
+	overflow: hidden; /*属性规定当内容溢出元素框时，修剪多余内容*/
+	z-index: 9999; /*设置元素的堆叠顺序（在网页的图层顺序），拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面*/
+	line-height: 2.5;
+	color: #ffffff;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.3);
+}
+
+.scroll-up:hover, .scroll-up:focus { /*悬浮、点击样式*/
+    background-color: #f8504b;
+    color:#ffffff;
+    transform: scale(1.1,1.1); /*缩放*/
+    transition:all 100ms; /*动画过渡*/
+}
+@media (max-width: 992px){
+    .scroll-up {
+        bottom:20px;
+        right:20px;
+        width:40px;
+        height:40px;
+    }
+}
+/*返回顶部结束*/
+
+
+/* 取消移动端a标签点击的蓝色背景 */
+a {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-user-select: none; /* 禁止选中 */
+	-moz-user-focus: none;
+	-moz-user-select: none;
+}
+div{
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}

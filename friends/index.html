@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="../assets/img/ico.webp"> <!-- 标签页图标 -->
+    <link rel="stylesheet" href="./master.css"> <!-- 使用相对路径将link标签将html与css样式相互连接，./表示当前路径，通常可以省略，特殊情况下不能省略。 -->
+
+    <title>友情链接 - CSUR</title> <!-- 定义网页文档的标题，该标题显示于浏览器的标签页中 -->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155097920-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-155097920-1');
+	</script>
+</head>
+<body>
+    <!-- div标签，块级元素标签，其实就是对页面内容进行分区，相当于用一个盒子将子级内容全部打包起来。这里创建一个盒子，用于放置网页内容。当涉及到设计和布局时，就会用到盒子模型，盒子模型是包围在网页元素内容四周的盒子，从里到外包含内容、内边距、边框、外边距这四个东西 -->
+    <div class="element-float"> <!-- 创建一个盒子，放置网页飘动小元素 -->
+        <img src="img/triangle.png" alt="" class="triangle">
+        <img src="img/rectangle.png" alt="" class="rectangle">
+        <img src="img/circle.png" alt="" class="circle">
+    </div>
+
+    <div class="header"> <!-- 创建一个盒子，放置上半部分的内容，并设置上半部分的背景色。如果背景色在楼下设置，背景色的宽度会与文字段落宽度一致，所以不满足设计需求 -->
+        <div class="profile"> <!-- 创建一个盒子，放置个人介绍的段落 -->
+            <a rel="noopener" class="mingzi"><h1>友情链接</h1></a> <!-- noopener：不作响应 -->
+            <!-- H1标题：姓名 -->
+            <div class="itntbutten">
+                <a href="https://csur.fun">
+                    <input type="submit" id="searchsubmit" value="返回主站">
+                </a>
+				<a href="https://bbs.csur.fun">
+				    <input type="submit" id="searchsubmit" value="返回论坛">
+				</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"> <!-- 创建一个盒子，放置网页中部主要内容 -->
+
+        <div class="projects-wrap" style="margin-top: 1.5625rem;"> <!-- “项目包”，容纳h2和所有的项目区块，并使h2缩进对齐 -->
+                <div class="projects">
+                    <div class="project">
+                        <a href="https://csur.fun" target="_self">
+                            <img src="../assets/img/banner.png" alt="">
+                            <h3>CSUR</h3>
+                        </a>
+                        <p>天际线迄今为止最大的道路模组。</p>
+                        #<span class="tag1">都市：天际线</span>
+                        #<span class="tag2">Mod</span>
+                    </div>
+                    <div class="project">
+                        <a href="https://bbs.csur.fun" target="_self">
+                            <img src="../assets/img/logo.svg" alt="">
+                            <h3>CSUR 社区</h3>
+                        </a>
+                        <p>与全球刁民交流。</p>
+                        #<span class="tag1">都市：天际线</span>
+                        #<span class="tag2">Mod</span>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+<footer class="bottomFooter"> <!-- 页脚标签，用于划定页脚范围 -->
+        <div class="footer-content"> <!-- 创建一个盒子，放置页脚内容 -->
+            <div class="site-info">
+                <p>Copyright © 2019 CSUR Team 版权所有</p>
+            </div>
+                </aside>
+            </div>
+        </div> 
+    </footer>
+    <!-- 回到顶部 -->
+    <a href="#" class="scroll-up">
+        <!-- i标签是用来显示斜体文本效果的，不过大多数时候，因为它比span少三个字母，所以很多人用i标签来放置图标。 -->
+        <i class="fa fa-chevron-up"></i> <!-- fa fa-chevron-up是在线导入的css中的图标样式 -->
+    </a>
+    <!-- 回到顶部 -->
+</body>
+</html>

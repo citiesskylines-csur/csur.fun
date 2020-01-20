@@ -1,0 +1,324 @@
+@import url("roboto.css");
+
+html {
+	/* TODO(dbeam): remove this soon. Prefer dir= in HTML. */
+	direction: ltr;
+	background-color: /*rgb(248,249,250)*/#FFFFFF;
+	box-sizing: border-box;
+	min-height: 100vh; /*min-height: 100%; 取消同步竖滚动条*/
+	-webkit-overflow-scrolling: touch;
+	overflow: auto; /*窗口滚动条自动出现*/
+}
+
+body {
+	margin: -200px 0 0 0;
+	font-family: Roboto, 'Segoe UI',Arial,'Microsoft Yahei',sans-serif;
+	font-size: 81.25%;
+	/* ↓ 配合 #container display: flex, 使页面所有内容垂直水平居中*/
+	bottom: 0;
+	left: 0;
+	position: absolute !important;
+	right: 0;
+	top: 0;
+	/* ↑ 垂直水平居中*/
+	
+}
+/* ↑ 主体 */
+
+/* ↓ 个体 */
+#container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    min-height: 100%;
+    min-width: 800px;
+    position: relative;
+}
+
+h2 {
+	color: #5f6368;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.25rem;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #202124;
+    font-size: 4rem;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    text-align: center;
+	outline: none;
+}
+/* ↑ 个体 */
+
+/* ↓ 页脚 */
+.footer-content{
+	padding: 30px 0; /*上下外边距*/
+    display: flex;
+	flex-direction: column;
+	color: #aaabab; /*区块内文字颜色*/
+	text-align: center; /*文本左对齐*/
+	line-height: 20%; /*文字行高*/
+	font-size: 1em;
+}
+.footer-content a{ /*设置页脚超链接文字的颜色*/
+    color: #aaabab;
+	font-weight: normal;
+}
+
+.footer-content a:hover{ /*设置页脚超链接鼠标悬停颜色*/
+    color: #ea4c89;
+}
+/* ↑ 页脚 */
+
+/* ↓ 按钮样式 */
+a{
+	text-decoration: none; /*下划线取消*/
+}
+input[type="submit"], input[type="reset"] { /*使用属性和值选择器设置表单（按钮）样式*/
+    border: 0; /*初始化*/
+	width: 256px;/*宽度*/
+	height: auto;
+	background-image: linear-gradient(120deg, #155799, #159957); /*按钮颜色*/
+    color: #ffffff; /*文字颜色*/
+    font-size: 1rem; /*文字大小*/
+    font-weight: bold; /*字重*/
+    display: inline-block; /*inline-block布局，是所有块级元素在行内排列显示，自动换行*/
+    border-radius: 0px; /*取消圆角*/
+    padding: 10px 0; /*内边距*/
+    margin: 0px;
+    transition: all 0.3s ease-in-out; /*设置按钮曲线出入动画效果*/
+
+    cursor: pointer; /*指定光标类型为指示链接的指针（一只手）*/
+}
+
+input:hover{ /*按钮悬停效果*/
+    position:relative; /*改成相对定位*/
+    transform: scale(1.1,1.1); /*向上挪动5px*/
+    transition:all 500ms; /*动画过渡*/
+}
+/* ↑ 按钮样式*/
+
+/* ↓ 全局淡入效果 */
+.fade-in {
+    animation-delay: 150ms;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-name: fade-in;
+    animation-timing-function: ease-in;
+	opacity: 0;
+}
+
+@keyframes fade-in{
+	0%{
+		opacity: 0;
+	}
+	
+	100%{
+		opacity: 1;
+	}
+}
+/* ↑ 全局淡入效果 */
+
+/* ↓ 浮动元素 */
+*{
+	    --navi-shape-blue-color: rgb(26, 115, 232);
+	    --navi-shape-green-color: rgb(49, 167, 83);
+	    --navi-shape-grey-color: rgb(241, 243, 244);
+	    --navi-shape-red-color: rgb(233, 66, 53);
+	    --navi-shape-yellow-dots-color: rgb(253, 214, 99);
+	    --navi-shape-yellow-semicircle-color: rgb(250, 207, 76);
+}
+onboarding-background{
+		z-index: -1;
+		
+}
+onboarding-background.fade-in{
+		animation-delay: 275ms;
+		/*浮动元素延迟淡入*/
+}
+@keyframes blue-circle-anim-x {
+50% {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transform: translateX(44px);
+}
+
+}
+
+@keyframes blue-circle-anim-y {
+50% {
+  animation-timing-function: cubic-bezier(0.55, 0, 0.2, 1);
+          transform: translateY(17px);
+}
+
+}
+
+@keyframes green-rectangle-anim {
+100% {
+  transform: rotate(360deg);
+}
+
+}
+
+@keyframes red-triangle-anim {
+50% {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transform: translateY(25px) rotate(-53deg);
+}
+
+}
+
+@keyframes yellow-semicircle-anim {
+40% {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transform: translateY(40px) rotate(-1deg);
+}
+
+}
+
+@keyframes grey-rounded-rectangle-anim {
+65% {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transform: translateY(-48px) rotate(-75deg);
+}
+
+}
+
+:host {
+  bottom: 0;
+        left: 0;
+        margin: auto;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+}
+
+#imgcontainer {
+		height: 100%;
+        left: 50%;
+        min-height: 700px;
+        min-width: 1024px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+		position: fixed;
+		z-index: -1;
+}
+
+img, span {
+  position: absolute;
+}
+
+#blue-circle-container {
+  animation: blue-circle-anim-x 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        left: calc(13% - 50px);  
+        top: calc(18% - 26px);
+}
+
+#blue-circle-container::after {
+  -webkit-mask: url(../img/blue_circle.svg) no-repeat
+            top left;
+        animation: blue-circle-anim-y 9s cubic-bezier(0.25, 0, 0.2, 1) infinite;
+        background-color: var(--navi-shape-blue-color);
+        content: ' '; 
+        height: 43px;
+        position: absolute;
+        width: 43px;
+}
+
+#yellow-dots {
+  -webkit-mask: url(../img/yellow_dots.svg) no-repeat
+            top left;
+        background-color: var(--navi-shape-yellow-dots-color);
+        content: ' '; 
+        height: 57px;
+        left: 13%;
+        top: 18%;
+        width: 76px;
+}
+
+#grey-rounded-rectangle {
+  -webkit-mask: url(../img/grey_rounded_rectangle.svg)
+            no-repeat top left;
+        animation: grey-rounded-rectangle-anim 10s cubic-bezier(0.4, 0, 0.2, 1)
+            infinite;
+        background-color: var(--navi-shape-grey-color);
+        content: ' '; 
+        height: 132px;
+        left: -42px;
+        top: 45%;
+        width: 132px;
+}
+
+#red-triangle {
+  -webkit-mask: url(../img/red_triangle.svg) no-repeat
+            bottom left;
+        animation: red-triangle-anim 9.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        background-color: var(--navi-shape-red-color);
+        bottom: 15%;
+        content: ' '; 
+        height: 74px;
+        left: 12%;
+        width: 65px;
+}
+
+#yellow-semicircle {
+  -webkit-mask: url(../img/yellow_semicircle.svg)
+            no-repeat top right;
+        animation: yellow-semicircle-anim 10s cubic-bezier(0.4, 0, 0.2, 1)
+            infinite;
+        background-color: var(--navi-shape-yellow-semicircle-color);
+        content: ' '; 
+        height: 171px;
+        right: 28.5%;
+        top: -50px;
+        transform: rotate(-7deg);
+        width: 211px;
+}
+
+#green-rectangle {
+  -webkit-mask: url(../img/green_rectangle.svg)
+            no-repeat bottom right;
+        animation: green-rectangle-anim 40s infinite linear;
+        background-color: var(--navi-shape-green-color);
+        bottom: 8%;
+        content: ' '; 
+        height: 371px;
+        right: -255px;
+        width: 371px;
+}
+
+#grey-oval {
+  -webkit-mask: url(../img/grey_oval.svg) no-repeat
+            bottom right;
+        background-color: var(--navi-shape-grey-color);
+        bottom: calc(8% + 24px);  
+        content: ' '; 
+        height: 100px;
+        mix-blend-mode: multiply;
+        right: 48px;
+        width: 100px;
+}
+
+@media (prefers-color-scheme: dark) {
+#grey-oval {
+  mix-blend-mode: screen;
+}
+
+}
+/* ↑ 浮动元素*/
+
+/*窗口过矮居中*/
+@media (max-height:900px) {
+	body {
+		margin: 0;
+	}
+}

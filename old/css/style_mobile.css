@@ -1,0 +1,33 @@
+html {
+	min-height: 100%; /*min-height: 100vh; 同步出现竖滚动条*/
+}
+
+body {
+	margin: 0;
+}
+/* ↑ 主体 */
+
+h2 {
+    font-size: 2.5rem;
+}
+h1 {
+    font-size: 6rem;
+}
+/* ↑ 个体 */
+
+/* ↓ 按钮样式 */
+input[type="submit"], input[type="reset"] { /*使用属性和值选择器设置表单（按钮）样式*/
+	width: 600px;/*宽度*/
+	height: 125px;
+    font-size: 65px; /*文字大小*/
+    padding: 20px 0px; /*内边距*/
+    margin: 10px;
+}
+/* ↑ 按钮样式*/
+
+/* ↓ 页脚 */
+.footer-content{
+	line-height: 0%; /*文字行高*/
+	font-size: 30px;
+}
+/* ↑ 页脚 */

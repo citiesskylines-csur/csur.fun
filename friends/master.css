@@ -1,0 +1,366 @@
+* { /* “ *{} ” 星号是通配符选择器，匹配所有标签*/
+    margin: 0; /*这里的三个属性，是为了统一不同浏览器的初始默认显示样式，防止在不同浏览器中，因为浏览器的默认样式不同而导致网页布局的变化。*/
+    padding: 0; /*margin：内容与盒子边框的距离，padding：边框与外面元素的距离。*/
+    box-sizing: border-box; /*box-sizing：定义浏览器是如何计算一个网页元素的宽高的。其值默认为content-box，意为当增加内容的内边距和边框时，内容保持不变，增加的距离向外部扩张，导致整体盒子的宽高的向外扩张。而border-box则相反，房子（盒子）建好了，布置（增加内边距和边框时）时向内装修（扩张），整体盒子大小不变。*/
+}
+
+
+
+body {
+    background-color: #f7f7f7; /*整个网站背景设定为浅灰色*/
+    font-size: 0.8em; /*整个网站字体大小设定为相对大小0.8，是针对于body的父级html中设定的字体大小的0.8倍，倘若父级html中并没有设定字体大小，则采用浏览器默认字体的大小的0.8倍，这样就可以针对不同的设备做到显示比例一致，这就是使用em单位的好处。*/
+    font-family: "PingFang SC", "Sarasa Gothic SC", "Microsoft Yahei", Verdana, sans-serif, 'Times New Roman', Times, serif;
+    color: #2b3f55; /*设置网页字体颜色为墨蓝色*/
+	
+	overflow-x: hidden;
+}
+
+li {
+    list-style: none; /*不使用项目符号样式*/
+    }
+
+a { /*全站超链接颜色*/
+    text-decoration: none; /*取消a标签的下划线*/
+    color: #2b3f55;
+	transition: all 0.2s ease-in-out;
+}
+
+a:hover{ /*全站超链接鼠标悬停颜色*/
+    color: #ea4c89;
+	transition: all 0.2s ease-in-out;
+}
+
+/*第一分区开始*/
+.header{
+        background-color: #fff; /*网页上半部分《个人介绍》背景色设定为白色*/
+}
+
+.profile{
+    padding: 80px 0; /*对象中的内容与四周边框的上下、右左内边距*/
+}
+
+.profile, .info, .projects-wrap, .footer-content{ /*对主要的三大区块和页脚区块同时设置共同的样式*/
+    width:800px; /*内容区域的宽度。我们希望整个网页内容显示宽度就这么宽，所以接下来的每一个主盒子内容宽度都保持一致*/
+    margin: 0 auto; /*上下外边距为0，右左外边距为auto自动平均分配：左右一样多→居中。*/
+}
+
+.profile p{
+    margin: 10px 0 10px; /*参数顺序：上-左右-下外边距。设置段落上下外边距为10px：段落之间的行距10px；左右外边距0：左右缩进为0。此处也可以用 margin: 10px 0，意为上下-左右 */
+}
+
+.profile .links{
+    margin-top: 40px; /*设置超链接盒子的外边距：与上方段落之间的顶部距离*/
+}
+
+.profile h1{
+    font-weight: bolder;
+	font-size: 2.1875rem;
+}
+
+.links img{
+    width: 22px;/*设置链接图标的宽度*/
+    margin-right: 1.3em; /*图标之间的间隔距离*/
+}
+
+.links img:hover {
+    opacity:0.7; /*透明度*/
+    filter:alpha(opacity=70);
+}
+
+.profile .itntbutten{
+    margin-top: 40px; /*按钮和links的间距*/
+}
+
+input[type="submit"], input[type="reset"] { /*使用属性和值选择器设置表单（按钮）样式*/
+    border: 0; /*初始化*/
+    background-color: #f8504b; /*按钮颜色*/
+    color: #ffffff; /*文字颜色*/
+    font-size: 0.938rem; /*文字大小*/
+    font-weight: 600; /*字重*/
+    display: inline-block; /*inline-block布局，是所有块级元素在行内排列显示，自动换行*/
+    border-radius: 50px; /*按钮圆角*/
+    padding: 10px 40px; /*内边距*/
+    margin: 0px;
+    transition: all 0.3s ease-in-out; /*设置按钮曲线出入动画效果*/
+
+    -webkit-appearance: button; /*定义div元素的外观，渲染成button风格*/
+    cursor: pointer; /*指定光标类型为指示链接的指针（一只手）*/
+}
+
+input:hover{ /*按钮悬停效果*/
+    position:relative; /*改成相对定位*/
+    transform: scale(1.1,1.1); /*向上挪动5px*/
+    transition:all 500ms; /*动画过渡*/
+}
+/*第一分区结束*/
+
+/*第三分区开始*/
+.projects-wrap h2{ /*h2与项目区块间的行距*/
+    margin-bottom: 30px;
+    font-size: 1.3em;
+}
+
+.projects{
+    display:  flex;
+    flex-wrap: wrap; /*flex-wrap：设置flex容器显示方式为单行或多行。wrap：必要时自动换行或换列。*/
+    justify-content: space-between;
+}
+
+.projects div{
+    transition: transform 0.5s, box-shadow 0.5s; /*设置效果出现、消失过渡时间*/
+}
+
+.projects div:hover{ /*项目卡片悬停效果*/
+    position:relative; /*改成相对定位*/
+    transform: translateY(-5px); /*Y轴位移*/
+    box-shadow:0px 5px 10px 0px #999; /*增加阴影效果*/
+    transition:all 500ms; /*动画过渡*/
+}
+
+.project img{
+    width: 100%; /*百分比大小，由父级元素的宽度决定。这里表示父级的卡片多宽，图片就多宽，由于卡片有padding，所以图片四周有“白边”。*/
+    border-radius: 0px; /*图片圆角为0，备用*/
+}
+
+.project{
+    height: 100%; /*根据内容高度自适应卡片高度  */
+    width: 350px;
+    background-color: #fff; /*白色卡片背景*/
+    padding: 15px; /*虚假的元素居中效果*/
+    margin-bottom: 50px; /*每个区块之间的行距*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*卡片的阴影参数：水平偏移值 垂直偏移值 模糊值 rgab(r, g, b, alpha)*/
+    border-radius: 5px; /*卡片圆角*/
+}
+
+.profile a{
+	width: -webkit-fit-content;
+}
+
+.project h3{
+    font-weight: bold;
+    margin: 20px 0; /*h3标题与下方段落间的行高*/
+    font-size: 1.3em;
+}
+
+.project p{
+    margin-bottom: 20px; /*文本段落与tag之间的行高*/
+    line-height: 2em;
+    font-weight: 200;
+}
+
+.project span{ /*设置标签的字重、右边距*/
+    font-weight: 200;
+    margin-right: 10px;
+}
+
+.tag1{ /*设置第一个标签的颜色*/
+    color: #ea4c89;
+}
+
+.tag2{ /*设置第二个标签的颜色*/
+    color: #0EAF49;
+}
+
+.tag3{ /*设置第三个标签的颜色*/
+    color: #2589BD;
+}
+
+.container{ /*中间主体与底部页脚间的距离*/
+    margin-bottom: 50px;
+}
+/*第三分区结束*/
+
+/*第四分区开始*/
+footer{ /*设置页脚上下外边距、左右边距平均分配*/
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    width: 100%; /*与网页同宽*/
+    box-shadow: 0 -2px 8px #eee; /*阴影*/
+	position:fixed;
+	bottom:0px;
+	z-index: 999;
+}
+
+.footer-content{
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px 0; /*上下外边距*/
+    display: flex;
+    flex-wrap: nowrap; /*不换行*/
+    justify-content: space-between;
+}
+
+.site-info, .cc-footer-license{
+    width: 350px; /*两个区块的宽度*/
+    color: #aaabab; /*区块内文字颜色*/
+}
+
+.site-info{
+        text-align: left; /*文本左对齐*/
+        line-height: 190%; /*文字行高*/
+}
+
+.site-info a, .cc-footer-license a{ /*设置页脚超链接文字的颜色*/
+    color: #aaabab;
+}
+
+.site-info a:hover, .cc-footer-license a:hover{ /*设置页脚超链接鼠标悬停颜色*/
+    color: #ea4c89;
+}
+/*第四分区结束*/
+
+/*元素浮动开始*/
+.element-float{
+    position: absolute; /*元素盒子绝对定位，其他网页元素不受该元素位置影响*/
+	z-index: 990;
+}
+
+.triangle{ /*三角形*/
+    position: absolute;
+    opacity: 0.5; /*透明度*/
+    width:100px; /*宽度*/
+    animation-name: float1; /*应用的动画名*/
+    animation-duration: 25s; /*一次动画的完成时间*/
+    animation-iteration-count: infinite; /*无限循环*/
+    animation-direction: alternate; /*来回方向运动，对圆形无用*/
+}
+
+.rectangle{ /*矩形*/
+    position: absolute;
+    opacity: 0.5;
+    width:100px;
+    animation-name: float2;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.circle{ /*圆形*/
+    position: absolute;
+    opacity: 0.5;
+    width:100px;
+    animation-name: float3;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float1 { /*定义一个关键帧动画，动画名float1*/
+    from{
+        transform: translate(-100px, 500px) rotate(0); /*起始定位xy位置和旋转*/
+    }
+    to{
+        transform: translate(900px, -120px) rotate(300deg); /*运动结束时xy的位置和旋转角度*/
+    }
+}
+
+@keyframes float2 {
+    from{
+        transform: translate(-100px, 200px) rotate(0); /*启示定位xy位置和旋转*/
+    }
+    to{
+        transform: translate(2000px, 1000px) rotate(300deg);
+    }
+}
+
+@keyframes float3 {
+    from{
+        transform: translate(700px, 1180px) rotate(0); /*启示定位xy位置和旋转*/
+    }
+    to{
+        transform: translate(1000px, -100px) rotate(300deg);
+    }
+}
+/*元素浮动结束*/
+
+/*返回顶部开始*/
+.scroll-up {
+    background-color: #f8504b; /*初始颜色*/
+    color:#ffffff; /*文字白色*/
+    transition: transform 0.5s; /*设置效果出现、消失过渡时间*/
+}
+
+.scroll-up:hover, .scroll-up:focus { /*悬浮、点击样式*/
+    background-color: #f8504b;
+    color:#ffffff;
+    transform: scale(1.1,1.1); /*缩放*/
+    transition:all 100ms; /*动画过渡*/
+}
+
+.scroll-up {
+    border-radius: 50px; /*圆角*/
+    bottom: 30px; /*距离网页底部*/
+    padding: 3px;
+    display: none;
+    height: 50px; /*圆高度*/
+    opacity: 1;
+    position: fixed;
+    right: 60px; /*距离网页右边*/
+    text-align: center; /*文本居中*/
+    width: 50px; /*圆宽度*/
+    overflow: hidden; /*属性规定当内容溢出元素框时，修剪多余内容*/
+    z-index: 9999; /*设置元素的堆叠顺序（在网页的图层顺序），拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面*/
+    line-height: 2.5;
+    color: #ffffff;
+}
+/*返回顶部结束*/
+
+/*响应式设计*/
+@media (max-width:900px) { /*使用CSS媒体查询来完成响应式设计。当括号中的表达式值为false时，执行大括号中的语句。*/
+    /*浏览器宽度小于900px时，执行下方的语句*/
+    .profile, .info, .projects-wrap, .footer-content{ /*对主要的三大区块和页脚区块同时设置共同的样式*/
+        width:90%; /*内容区域的宽度。我们希望整个网页内容显示宽度就这么宽，所以接下来的每一个主盒子内容宽度都保持一致*/
+        margin: 0 auto; /*上下外边距为0，右左外边距为auto自动平均分配：左右一样多→居中。*/
+    }
+
+    .info{
+        display: block; /*规定元素应该生成的框的类型。block：此元素将显示为块级元素，此元素前后会带有换行符。*/
+        flex-wrap: wrap;
+        padding: 70px 0;
+    }
+
+    .info div{
+        margin-bottom: 50px;
+    }
+
+    .footer-content{
+        margin: 0 auto;
+        padding: 50px 0; /*上下外边距*/
+        display:block;
+    }
+    .footer-content .site-info, .cc-footer-license{
+        margin-bottom: 20px;
+        width:100%;
+    }
+
+    .header, .project{
+        width: 100%;
+    }
+
+    @keyframes float1 { /*定义一个关键帧动画，动画名float1*/
+        from{
+            transform: translate(-100px, 500px) rotate(0); /*起始定位xy位置和旋转*/
+        }
+        to{
+            transform: translate(100%, -120px) rotate(300deg); /*运动结束时xy的位置和旋转角度*/
+        }
+    }
+
+    @keyframes float2 {
+        from{
+            transform: translate(-50px, 200px) rotate(0); /*启示定位xy位置和旋转*/
+        }
+        to{
+            transform: translate(100%, 1800px) rotate(300deg);
+        }
+    }
+
+    @keyframes float3 {
+        from{
+            transform: translate(150px, 4000px) rotate(0); /*启示定位xy位置和旋转*/
+        }
+        to{
+            transform: translate(100%, -100px) rotate(300deg);
+        }
+    }
+}
