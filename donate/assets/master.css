@@ -256,6 +256,15 @@ h2{
   }
 }
 
+.ctrBoxText a{
+	text-decoration: underline;
+	color: inherit;
+}
+
+.ctrBoxText a:hover{
+	color: #E7672E;
+}
+
 .ctrBoxText, .budgetContainer{
 	max-width: 1260px;
     margin: 0px auto;
