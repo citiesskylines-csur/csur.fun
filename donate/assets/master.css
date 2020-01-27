@@ -385,6 +385,26 @@ h2{
 	background-image: url(img/qcloud.jpg);
 }
 
+.headVlao{
+	background-image: url(img/vlao.jpg);
+}
+
+.headPlao{
+	background-image: url(img/plao.jpg);
+}
+
+.headAlao{
+	background-image: url(img/alao.jpg);
+}
+
+.headSlicky{
+	background-image: url(img/slicky.jpg);
+}
+
+.headMaomi{
+	background-image: url(img/maomi.jpg);
+}
+
 .cardHeadTagContainer {
     display: flex;
     height: 100%;
@@ -609,8 +629,6 @@ button.qcloud{
 	box-sizing: border-box;
     margin-top: 8px;
     height: 60px;
-	/*display: none;*/
-	visibility: hidden;
 }
 
 .ctrbtorsBox{
@@ -853,7 +871,10 @@ button.qcloud{
     border-radius: 4px;
     padding: 6px 8px;
     background: rgb(214, 255, 233);
-    border-color: rgb(24, 204, 108);
+}
+.StateOut{
+    color: rgb(255, 0, 68);
+    background: rgb(255, 229, 233);
 }
 .detailCaption{
     color: rgb(157, 159, 163);
@@ -876,7 +897,7 @@ button.qcloud{
 	color: rgb(13, 184, 19);
     margin-right: 8px;
 }
-.MoneyTyprOut{
+.DealMoney .MoneyTypeOut{
 	color: rgb(184, 15, 60);
 }
 .DealMoney .MoneyNum{
