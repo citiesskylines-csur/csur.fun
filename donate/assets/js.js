@@ -57,6 +57,51 @@ window.onload = function() {
 	document.getElementById("qrcodeMgpayS1").onclick = function() {
 		document.getElementById("qrcodeMgpayS1").className = "qr";
 	}
+	
+	// 刷新后判断位置
+		// 判断位置 
+		// if()还有↑这里 ID 和类选择器都可以用
+		if(cardForDev.scrollLeft > 0){
+			document.getElementById("toLeft1").removeAttribute('disabled');
+		}
+		if(cardForDev.scrollLeft == 0){
+			document.getElementById("toLeft1").setAttribute("disabled", true);
+		}
+		if(cardForDev.scrollLeft == cardForDev.scrollWidth - cardForDev.clientWidth){
+			 document.getElementById("toRight1").setAttribute("disabled", true);
+		}
+		if(cardForDev.scrollLeft != cardForDev.scrollWidth - cardForDev.clientWidth){
+			 document.getElementById("toRight1").removeAttribute('disabled');
+		}
+		
+		//CDN
+		if(cardForAliCDN.scrollLeft > 0){
+			document.getElementById("toLeft2").removeAttribute('disabled');
+		}
+		if(cardForAliCDN.scrollLeft == 0){
+			document.getElementById("toLeft2").setAttribute("disabled", true);
+		}
+		if(cardForAliCDN.scrollLeft == cardForAliCDN.scrollWidth - cardForAliCDN.clientWidth){
+			 document.getElementById("toRight2").setAttribute("disabled", true);
+		}
+		if(cardForAliCDN.scrollLeft != cardForAliCDN.scrollWidth - cardForAliCDN.clientWidth){
+			 document.getElementById("toRight2").removeAttribute('disabled');
+		}
+		
+		//捐赠人
+		if(cardForCtrlist.scrollLeft > 0){
+			document.getElementById("toLeft3").removeAttribute('disabled');
+		}
+		if(cardForCtrlist.scrollLeft == 0){
+			document.getElementById("toLeft3").setAttribute("disabled", true);
+		}
+		if(cardForCtrlist.scrollLeft == cardForCtrlist.scrollWidth - cardForCtrlist.clientWidth){
+			 document.getElementById("toRight3").setAttribute("disabled", true);
+		}
+		if(cardForCtrlist.scrollLeft != cardForCtrlist.scrollWidth - cardForCtrlist.clientWidth){
+			 document.getElementById("toRight3").removeAttribute('disabled');
+		}
+	
 }
 
 // 滚动时菜单栏效果
@@ -243,51 +288,6 @@ nav(window,'scroll',function(){
 	});
 	
 	
-	window.onload = function() {
-		// 刷新后判断位置
-		// 判断位置 
-		// if()还有↑这里 ID 和类选择器都可以用
-		if(cardForDev.scrollLeft > 0){
-			document.getElementById("toLeft1").removeAttribute('disabled');
-		}
-		if(cardForDev.scrollLeft == 0){
-			document.getElementById("toLeft1").setAttribute("disabled", true);
-		}
-		if(cardForDev.scrollLeft == cardForDev.scrollWidth - cardForDev.clientWidth){
-			 document.getElementById("toRight1").setAttribute("disabled", true);
-		}
-		if(cardForDev.scrollLeft != cardForDev.scrollWidth - cardForDev.clientWidth){
-			 document.getElementById("toRight1").removeAttribute('disabled');
-		}
-		
-		//CDN
-		if(cardForAliCDN.scrollLeft > 0){
-			document.getElementById("toLeft2").removeAttribute('disabled');
-		}
-		if(cardForAliCDN.scrollLeft == 0){
-			document.getElementById("toLeft2").setAttribute("disabled", true);
-		}
-		if(cardForAliCDN.scrollLeft == cardForAliCDN.scrollWidth - cardForAliCDN.clientWidth){
-			 document.getElementById("toRight2").setAttribute("disabled", true);
-		}
-		if(cardForAliCDN.scrollLeft != cardForAliCDN.scrollWidth - cardForAliCDN.clientWidth){
-			 document.getElementById("toRight2").removeAttribute('disabled');
-		}
-		
-		//捐赠人
-		if(cardForCtrlist.scrollLeft > 0){
-			document.getElementById("toLeft3").removeAttribute('disabled');
-		}
-		if(cardForCtrlist.scrollLeft == 0){
-			document.getElementById("toLeft3").setAttribute("disabled", true);
-		}
-		if(cardForCtrlist.scrollLeft == cardForCtrlist.scrollWidth - cardForCtrlist.clientWidth){
-			 document.getElementById("toRight3").setAttribute("disabled", true);
-		}
-		if(cardForCtrlist.scrollLeft != cardForCtrlist.scrollWidth - cardForCtrlist.clientWidth){
-			 document.getElementById("toRight3").removeAttribute('disabled');
-		}
-	};
 	// 监听窗口宽度
 	window.addEventListener('resize', function() {
 		// 判断位置
