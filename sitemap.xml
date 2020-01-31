@@ -1,215 +1,276 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- Created By http://www.zhetao.com/sitemapcreator,  URLs: 42 Generated at: 2020-01-05 23:12:33 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-  <url>
-    <loc>https://csur.fun/</loc>
-    <priority>1.00</priority>
-  </url>
 
-  <url>
-    <loc>https://csur.fun/docs/</loc>
-    <priority>1.00</priority>
-  </url>
+<url>
+  <loc>https://www.csur.fun/</loc>
+  <lastmod>2020-01-28T16:55:27+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/features/</loc>
+  <lastmod>2020-01-28T16:55:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/docs/</loc>
+  <lastmod>2020-01-28T16:44:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/docs/guide/</loc>
+  <lastmod>2020-01-28T16:44:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/tw/</loc>
+  <lastmod>2020-01-28T16:55:19+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/</loc>
+  <lastmod>2020-01-28T16:54:49+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/ja/</loc>
+  <lastmod>2020-01-28T16:55:08+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/donate/</loc>
+  <lastmod>2020-01-28T16:54:42+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/privacy/</loc>
+  <lastmod>2020-01-28T16:55:14+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/docs/guide/faq.html</loc>
+  <lastmod>2020-01-28T16:44:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/docs/dev/</loc>
+  <lastmod>2020-01-28T16:44:12+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/tw/docs/</loc>
+  <lastmod>2020-01-28T16:45:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/docs/</loc>
+  <lastmod>2020-01-28T16:44:26+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/ja/docs/</loc>
+  <lastmod>2020-01-28T16:44:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/tw/docs/guide/</loc>
+  <lastmod>2020-01-28T16:45:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/docs/guide/</loc>
+  <lastmod>2020-01-28T16:44:26+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/ja/docs/guide/</loc>
+  <lastmod>2020-01-28T16:44:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/docs/guide/core.html</loc>
+  <lastmod>2020-01-28T16:44:12+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/docs/guide/compatibility.html</loc>
+  <lastmod>2020-01-28T16:44:12+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/docs/guide/notice.html</loc>
+  <lastmod>2020-01-28T16:44:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/docs/guide/install.html</loc>
+  <lastmod>2020-01-28T16:44:13+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/docs/guide/donate-list.html</loc>
+  <lastmod>2020-01-28T16:44:12+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/features/</loc>
+  <lastmod>2020-01-28T16:54:53+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/docs/guide/install.html</loc>
+  <lastmod>2020-01-28T16:44:26+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/tw/docs/guide/faq.html</loc>
+  <lastmod>2020-01-28T16:45:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/docs/guide/faq.html</loc>
+  <lastmod>2020-01-28T16:44:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/ja/docs/guide/faq.html</loc>
+  <lastmod>2020-01-28T16:44:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/tw/docs/dev/</loc>
+  <lastmod>2020-01-28T16:45:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/docs/dev/</loc>
+  <lastmod>2020-01-28T16:44:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/ja/docs/dev/</loc>
+  <lastmod>2020-01-28T16:44:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/tw/docs/guide/core.html</loc>
+  <lastmod>2020-01-28T16:45:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/tw/docs/guide/compatibility.html</loc>
+  <lastmod>2020-01-28T16:45:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/tw/docs/guide/notice.html</loc>
+  <lastmod>2020-01-28T16:45:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/tw/docs/guide/install.html</loc>
+  <lastmod>2020-01-28T16:45:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/tw/docs/guide/donate-list.html</loc>
+  <lastmod>2020-01-28T16:45:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/docs/guide/core.html</loc>
+  <lastmod>2020-01-28T16:44:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/docs/guide/compatibility.html</loc>
+  <lastmod>2020-01-28T16:44:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/docs/guide/notice.html</loc>
+  <lastmod>2020-01-28T16:44:26+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/en/docs/guide/donate-list.html</loc>
+  <lastmod>2020-01-28T16:44:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/ja/docs/guide/core.html</loc>
+  <lastmod>2020-01-28T16:44:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/ja/docs/guide/compatibility.html</loc>
+  <lastmod>2020-01-28T16:44:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/ja/docs/guide/notice.html</loc>
+  <lastmod>2020-01-28T16:44:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/ja/docs/guide/install.html</loc>
+  <lastmod>2020-01-28T16:44:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.csur.fun/ja/docs/guide/donate-list.html</loc>
+  <lastmod>2020-01-28T16:44:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
 
-  <url>
-    <loc>https://csur.fun/docs/guide/</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/tw/</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/ja/</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/donate/</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/docs/guide/install.html</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/privacy/</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/docs/guide/faq.html</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/tw/docs/guide/faq.html</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/ja/docs/guide/faq.html</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/en/docs/guide/faq.html</loc>
-    <priority>0.97</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/tw/docs/guide/</loc>
-    <priority>0.93</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/ja/docs/guide/</loc>
-    <priority>0.93</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/en/docs/guide/</loc>
-    <priority>0.92</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/docs/dev/</loc>
-    <priority>0.87</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/docs/guide/core.html</loc>
-    <priority>0.87</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/docs/guide/compatibility.html</loc>
-    <priority>0.86</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/tw/docs/</loc>
-    <priority>0.84</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/en/docs/</loc>
-    <priority>0.84</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/ja/docs/</loc>
-    <priority>0.84</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/en/</loc>
-    <priority>0.81</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/en/docs/dev/</loc>
-    <priority>0.79</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/ja/docs/dev/</loc>
-    <priority>0.79</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/tw/docs/dev/</loc>
-    <priority>0.79</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/tw/docs/guide/core.html</loc>
-    <priority>0.79</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/en/docs/guide/core.html</loc>
-    <priority>0.79</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/ja/docs/guide/core.html</loc>
-    <priority>0.79</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/docs/guide/notice.html</loc>
-    <priority>0.77</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/tw/docs/guide/notice.html</loc>
-    <priority>0.77</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/tw/docs/guide/compatibility.html</loc>
-    <priority>0.77</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/en/docs/guide/notice.html</loc>
-    <priority>0.77</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/en/docs/guide/compatibility.html</loc>
-    <priority>0.77</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/ja/docs/guide/compatibility.html</loc>
-    <priority>0.77</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/ja/docs/guide/notice.html</loc>
-    <priority>0.77</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/tw/docs/guide/install.html</loc>
-    <priority>0.76</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/ja/docs/guide/install.html</loc>
-    <priority>0.76</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/en/docs/guide/install.html</loc>
-    <priority>0.76</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/docs/guide/donate-list.html</loc>
-    <priority>0.73</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/tw/docs/guide/donate-list.html</loc>
-    <priority>0.73</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/en/docs/guide/donate-list.html</loc>
-    <priority>0.73</priority>
-  </url>
-
-  <url>
-    <loc>https://csur.fun/ja/docs/guide/donate-list.html</loc>
-    <priority>0.73</priority>
-  </url>
 
 </urlset>
